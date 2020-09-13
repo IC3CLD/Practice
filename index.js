@@ -1,4 +1,24 @@
 "use strict"
+
+/*
+ * Используем цикл для вывода только нечетных чисел.
+ * Для чётных i срабатывает continue, выполнение тела прекращается
+ * и управление передаётся на следующую итерацию.
+ */
+// const number = 10;
+
+// for (let i = 0; i < number; i += 1) {
+//   if (i % 2 === 0) {
+//     continue;
+//   }
+
+//   console.log('Нечетное i: ', i); // 1, 3, 5, 7, 9
+// }
+
+
+
+
+
 // const callback = function () {
 
 // };
@@ -13,16 +33,16 @@
 
 
 
-const callbackFN = function (zaebal) {
-    console.log(zaebal+10);
-};
+// const callbackFN = function (zaebal) {
+//     console.log(zaebal+10);
+// };
 
-const tipoFN = function (callback) {
-    const a = 5;
-    callback(a)
-};
+// const tipoFN = function (callback) {
+//     const a = 5;
+//     callback(a)
+// };
 
-tipoFN(callbackFN);
+// tipoFN(callbackFN);
 
 
 // // == task-3 == //
