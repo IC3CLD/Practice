@@ -430,14 +430,298 @@
 
 //   }
 //   start(programm,bet)
-const FN = function(n , fnCB) {
-    for ( let i = 0; i<n; i +=1)
-    fnCB(i)
+// const FN = function(n , fnCB) {
+//     for ( let i = 0; i<n; i +=1)
+//     fnCB(i)
 
+// };
+
+// const callbackFN = function (toDoWith) {
+//     console.log(toDoWith);
+// };
+
+// FN(10, callbackFN);
+
+////////////////////////// constructor /////////////////////////////////////////////////////////
+
+// const CarCreator = function(name = `default`,age = `default`,color = `default`,fuelType = `default`,weight = `default`, speed = `default`) {
+//     this.name = name;
+//     this.age = age;
+//     this.color = color;
+//     this.fuelType = fuelType;
+//     this.weight = weight;
+//     this.speed = speed;
+
+//     this.checkAcceleration = function () {
+//         this.acceleration = this.weight * this.speed;
+//         console.log(this.weight * this.speed);
+//     }
+// }
+
+// const ferrari = new CarCreator(`Ferrari`, 5, `red`, `gas`, 1200, 320);
+// console.log(ferrari);
+// ferrari.checkAcceleration()
+
+
+// const PizzaCreator = function(name = `default`, size = `default`,sause = `default`, cheese = `default`, meatToping = `default`,topping = `default`,extraTopping = `default`,) {
+//     this.name = name;
+//     this.size = size;
+//     this.sause = sause;
+//     this.cheese = cheese;
+//     this.meatToping = meatToping;
+//     this.topping = topping;
+//     this.extraTopping = extraTopping;
+//     this.showMeMyPizza = function () {
+//         console.log(`Your's pizza is ${this.name}, ${this.size} size , with ${ this.sause} sause,
+//          ${this.cheese} cheese, ${this.meatToping}, and ${this.extraTopping}.`);
+//     }
+//     this.pizzaPrise = function () {
+//         if (this.size === `XL`) {
+//             console.log(`Order prise will be 100 rz`);
+//         } else if (this.size === `L`) {
+//             console.log(`Order prise will be 80 rz`);
+//         } else if (this.size === `M`) {
+//             console.log(`Order prise will be 60 rz`);
+//         } else {
+//             console.log(`Order prise will be 50 rz`);
+//         };
+//     };
+// };
+
+// const paperoni = new PizzaCreator(`Paperoni`, `XL`, `pelati`, `cheddar`, `paperoni`, `onions`, `tomatos`);
+// paperoni.pizzaPrise();
+// paperoni.showMeMyPizza()
+
+
+// const Hero = function(name, xp) {
+//     this.name = name;
+//     this.xp = xp;
+//   };
+  
+//   Hero.prototype.gainXp = function(amount) {
+//     console.log(`${this.name} gained ${amount} experience points`);
+//     this.xp += amount;
+//   };
+
+//   ////////////////////////HUMAN//////////////////////////////////
+  
+//   const Human = function(name, xp, weapon) {
+//     Hero.bind(this, name, xp);
+  
+//     this.weapon = weapon;
+//   };
+  
+//   Human.prototype.attack = function() {
+//     console.log(`${this.name} attacks with ${this.weapon}`);
+//   };
+
+//   ////////////////////////ELVEN//////////////////////////////////////
+
+//   const Elven = function(name, xp, magic) {
+//     Elven.bind(this, name, xp);
+  
+//     this.magic = magic;
+//   };
+ 
+//   Elven.prototype.attack = function() {
+//     console.log(`${this.name} attacks with ${this.magic}`);
+//   };
+
+//   const mango = new Elven(`mango`, 200, `IceBlast`)
+//   console.log(mango);
+  
+
+// const Guest = function(name, room) {
+//   this.name = name;
+//   this.room = room;
+// };
+// Guest.prototype.showGuestInfo = function() {
+//   console.log(`name: ${this.name}, room: ${this.room}`);
+// };
+// const mango = new Guest('Mango', 28);
+// const poly = new Guest('Poly', 36);
+// mango.showGuestInfo(); // name: Mango, room: 28
+// poly.showGuestInfo(); // name: Poly, room: 36
+
+// console.log(poly);
+
+
+// const users = [
+//     {
+//         id: '701b29c3-b35d-4cf1-a5f6-8b12b29a5081',
+//         name: 'Moore Hensley',
+//         email: 'moorehensley@indexia.com',
+//         eyeColor: 'blue',
+//         friends: ['Sharron Pace'],
+//         isActive: false,
+//         balance: 2811,
+//         skills: ['ipsum', 'lorem'],
+//         gender: 'male',
+//         age: 37,
+//     },
+//     {
+//         id: '7a3cbd18-57a1-4534-8e12-1caad921bda1',
+//         name: 'Sharlene Bush',
+//         email: 'sharlenebush@tubesys.com',
+//         eyeColor: 'blue',
+//         friends: ['Briana Decker', 'Sharron Pace'],
+//         isActive: true,
+//         balance: 3821,
+//         skills: ['tempor', 'mollit', 'commodo', 'veniam', 'laborum'],
+//         gender: 'female',
+//         age: 34,
+//     },
+//     {
+//         id: '88beb2f3-e4c2-49f3-a0a0-ecf957a95af3',
+//         name: 'Ross Vazquez',
+//         email: 'rossvazquez@xinware.com',
+//         eyeColor: 'green',
+//         friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//         isActive: false,
+//         balance: 3793,
+//         skills: ['nulla', 'anim', 'proident', 'ipsum', 'elit'],
+//         gender: 'male',
+//         age: 24,
+//     },
+//     {
+//         id: '249b6175-5c30-44c6-b154-f120923736f5',
+//         name: 'Elma Head',
+//         email: 'elmahead@omatom.com',
+//         eyeColor: 'green',
+//         friends: ['Goldie Gentry', 'Aisha Tran'],
+//         isActive: true,
+//         balance: 2278,
+//         skills: ['adipisicing', 'irure', 'velit'],
+//         gender: 'female',
+//         age: 21,
+//     },
+//     {
+//         id: '334f8cb3-eb04-45e6-abf4-4935dd439b70',
+//         name: 'Carey Barr',
+//         email: 'careybarr@nurali.com',
+//         eyeColor: 'blue',
+//         friends: ['Jordan Sampson', 'Eddie Strong'],
+//         isActive: true,
+//         balance: 3951,
+//         skills: ['ex', 'culpa', 'nostrud'],
+//         gender: 'male',
+//         age: 27,
+//     },
+//     {
+//         id: '150b00fb-dd82-427d-9faf-2879ea87c695',
+//         name: 'Blackburn Dotson',
+//         email: 'blackburndotson@furnigeer.com',
+//         eyeColor: 'brown',
+//         friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//         isActive: false,
+//         balance: 1498,
+//         skills: ['non', 'amet', 'ipsum'],
+//         gender: 'male',
+//         age: 38,
+//     },
+//     {
+//         id: 'e1bf46ab-7168-491e-925e-f01e21394812',
+//         name: 'Sheree Anthony',
+//         email: 'shereeanthony@kog.com',
+//         eyeColor: 'brown',
+//         friends: ['Goldie Gentry', 'Briana Decker'],
+//         isActive: true,
+//         balance: 2764,
+//         skills: ['lorem', 'veniam', 'culpa'],
+//         gender: 'female',
+//         age: 39,
+//     },
+// ];
+
+// const names = users.map(user => user.name);
+// console.log(names);
+// const copy = [];
+// users.forEach(item => copy.push(item.name));
+// console.log(copy);
+
+
+// const userSearch = function(array, color) {
+//   return array.filter(user => user.eyeColor === color)
+// }
+// console.log(userSearch(users, `brown`));
+
+
+// const userMailSearch = function(array, mail) {
+//   return array.find(user => user.email === mail);
+// };
+// console.log(userMailSearch(users, 'shereeanthony@kog.com'));
+
+// const ageSearch = function(array, minAge, maxAge) {
+//   return array.filter(user => (user.age > minAge && user.age < maxAge));
+// }
+// console.log(ageSearch(users, 30, 40));
+
+
+// const summ = users.reduce((acc, user) => acc + user.balance, 0);
+// console.log(summ);
+
+// const friendSearch = function(array, friend) {
+//   return array.filter(user => user.friends.includes(friend))
+// }
+// console.log(friendSearch(users, 'Briana Decker'));
+
+
+
+
+// const skillsArray = users.filter(user => {
+//   if (skillsArray.includes(...user.skills)) {
+
+//   } else {skillsArray.push((...user.skills))}
+// })
+// console.log(skillsArray);
+
+// const elem = document.querySelector(`p`);
+// elem.textContent += ` Shalom!`;
+// elem.style.fontSize = `50px`;
+// console.log(elem.textContent);
+// const body = document.querySelector(`body`);
+// body.style.background = `teal`;
+
+
+// let body = document.querySelector(`body`);
+// for (let index = 0; index < 10; index++) {
+//   const img = document.createElement(`img`);
+//   img.src = `https://vignette.wikia.nocookie.net/wowwiki/images/1/19/BTNGoblinLandMine.png/revision/latest?cb=20090112004546`;
+//   body.append(img);
+// }
+
+
+// const hotel = {
+//   name: `sfdgsdgds`,
+//   stars: 2,
+//   capacity: 1231231,
+// };
+// const fn = function({name, stars, capacity}){
+// // const fn = function(someHotel) {
+// //   const {name,stars,capacity} = hotel;
+//   console.log(name);
+//   console.log(stars);
+//   console.log(capacity);
+// };
+// fn(hotel)
+
+class Hero {
+  constructor(name, xp){
+    this.name = name;
+    this.xp = xp;
+  }
+  changeName(name) {
+    this.name = name;
+  }
+  gainXp(value) {
+    console.log(`${this.name} gained ${value} xp!`);
+    this.xp += value;
+  }
 };
 
-const callbackFN = function (toDoWith) {
-    console.log(toDoWith);
-};
-
-FN(10, callbackFN);
+const mango = new Hero(`Mango`, 100);
+console.log(mango);
+mango.changeName(`Valakas`);
+console.log(mango);
+mango.gainXp(111);
+console.log(mango);
