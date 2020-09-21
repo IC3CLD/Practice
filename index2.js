@@ -705,23 +705,77 @@
 // };
 // fn(hotel)
 
-class Hero {
-  constructor(name, xp){
-    this.name = name;
-    this.xp = xp;
-  }
-  changeName(name) {
-    this.name = name;
-  }
-  gainXp(value) {
-    console.log(`${this.name} gained ${value} xp!`);
-    this.xp += value;
-  }
-};
+// class Hero {
+//   constructor(name, xp){
+//     this.name = name;
+//     this.xp = xp;
+//   }
+//   changeName(name) {
+//     this.name = name;
+//   }
+//   gainXp(value) {
+//     console.log(`${this.name} gained ${value} xp!`);
+//     this.xp += value;
+//   }
+// };
 
-const mango = new Hero(`Mango`, 100);
-console.log(mango);
-mango.changeName(`Valakas`);
-console.log(mango);
-mango.gainXp(111);
-console.log(mango);
+// const mango = new Hero(`Mango`, 100);
+// console.log(mango);
+// mango.changeName(`Valakas`);
+// console.log(mango);
+// mango.gainXp(111);
+// console.log(mango);
+
+
+
+
+// let body = document.querySelector(`body`);
+// for (let index = 0; index < 3; index++) {
+//   const btn = document.createElement(`button`);
+//   btn.classList.add(`colored`)
+//   btn.textContent = `color changer`;
+//   const randomCollor = `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`;
+//   btn.style.background = randomCollor;
+//   body.append(btn);
+
+// };
+// const buttonList = document.querySelectorAll(`.colored`);
+// const btn1 = buttonList[0];
+// const btn2 = buttonList[1];
+// const btn3 = buttonList[2];
+
+// btn1.addEventListener(`click`, (e) => body.style.background = e.target.style.background);
+// btn2.addEventListener(`click`, (e) => body.style.background = e.target.style.background);
+// btn3.addEventListener(`click`, (e) => body.style.background = e.target.style.background);
+
+
+// let body = document.querySelector(`body`);
+// for (let index = 0; index < 10; index++) {
+// const cube = document.createElement(`div`);
+// cube.classList.add(`cube`);
+// cube.textContent = index;
+// body.append(cube);
+
+// // cube.addEventListener(`click`, () => {
+// //   alert(cube.textContent)
+// // }
+// }
+
+// body.addEventListener(`click`, (e) => {
+//   alert(e.target.textContent)
+// })
+
+// let body = document.querySelector(`body`);
+// body.style.height = `400vh`;
+// window.addEventListener(`scroll`, (e) => {
+//   window.scrollY > 100 ? body.style.backgroundColor = `red` : ``;
+//   window.scrollY > 300 ? body.style.backgroundColor = `tomato` : ``;
+//   window.scrollY > 500 ? body.style.backgroundColor = `teal` : ``;
+//   window.scrollY > 700 ? body.style.backgroundColor = `blue` : ``;
+// })
+
+
+let body = document.querySelector(`body`);
+body.addEventListener('click', (e)=> {
+  body.innerHTML += `<div class='circle' style="top:${e.clientY}px; left:${e.clientX}px">:black_heart:</div>`
+  })
